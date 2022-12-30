@@ -1,11 +1,14 @@
 package com.example.safely;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -14,7 +17,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
     GoogleSignInClient gsc;
     ImageView googleBtn;
     Button logsignup;
+    Button loginbtn;
+    EditText username;
+    EditText passwordi;
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         googleBtn = findViewById(R.id.google_btn);
         logsignup=findViewById(R.id.logsignup);
+        mAuth = FirebaseAuth.getInstance();
+        loginbtn = findViewById(R.id.loginbtn);
+        username = findViewById(R.id.username);
+        passwordi = findViewById(R.id.passwordi);
+
+        loginbtn.setOnClickListener(view -> {
+            loginUser();
+    });
 
         logsignup.setOnClickListener(view -> {
             startActivity(new Intent(MainActivity.this,SignUp.class));
@@ -53,6 +71,31 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void loginUser(){
+        String email = username.getText().toString();
+        String password = passwordi.getText().toString();
+
+        if (TextUtils.isEmpty(email)){
+            username.setError("Email cannot be empty");
+            username.requestFocus();
+        }else if (TextUtils.isEmpty(password)){
+            passwordi.setError("Password cannot be empty");
+            passwordi.requestFocus();
+        }else{
+            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()){
+                        Toast.makeText(MainActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                    }else{
+                        Toast.makeText(MainActivity.this, "Log in error", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 
     void signIn(){

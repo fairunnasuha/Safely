@@ -11,30 +11,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="34sp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:text="name"
-        android:textColor="@color/black"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="34sp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/email"
-        android:text="email"
-        android:textColor="@color/black"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/name"
-        android:textSize="24sp"/>
+        android:layout_marginTop="36dp"
+        android:text="Safely"
+        android:textSize="34sp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -43,5 +24,48 @@
         android:text="Sign out"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/guardian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="191dp"
+        android:text="GUARDIAN" />
+
+    <Button
+        android:id="@+id/emergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="266dp"
+        android:text="EMERGENCY" />
+
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="PROFILE" />
+
+    <Button
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="268dp"
+        android:text="LOCATION" />
+
+    <Button
+        android:id="@+id/aboutus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="181dp"
+        android:text="ABOUT US" />
 
 </RelativeLayout>

@@ -46,11 +46,9 @@ public class SecondActivity extends AppCompatActivity {
             email.setText(personEmail);
         }
 
-        signOutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signOut();
-            }
+        signOutBtn.setOnClickListener(view -> {
+            mAuth.signOut();
+            startActivity(new Intent(SecondActivity.this, MainActivity.class));
         });
 
 
