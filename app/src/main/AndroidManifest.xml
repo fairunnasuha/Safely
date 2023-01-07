@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Safely"
         tools:targetApi="31">
         <activity
+            android:name=".GuardianActivity"
+            android:exported="false" />
+        <activity
             android:name=".sosActivity"
             android:exported="false" />
         <activity

@@ -23,6 +23,7 @@ public class SecondActivity extends AppCompatActivity {
     TextView name,email;
     Button signOutBtn;
     FirebaseAuth mAuth;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,10 @@ public class SecondActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         signOutBtn = findViewById(R.id.signout);
         mAuth = FirebaseAuth.getInstance();
+        button =findViewById(R.id.guardian);
+        button.setOnClickListener(view -> {
+            startActivity(new Intent(SecondActivity.this,GuardianActivity.class));
+                });
 
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
@@ -73,5 +78,6 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }
