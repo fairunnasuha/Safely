@@ -108,6 +108,7 @@
         android:id="@+id/others"
         android:layout_above="@id/socialicons"
         android:text="or sign in with"
+        android:textColor="#F6F6F6"
         android:layout_centerHorizontal="true"/>
 
 
