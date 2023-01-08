@@ -22,13 +22,5 @@
         android:text="SOS"
         android:textSize="50dp"
         app:backgroundTint="#A30505" />
-
-    <Button
-        android:id="@+id/cancelbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="72dp"
-        android:text="cancel" />
+    
 </RelativeLayout>
