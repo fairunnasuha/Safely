@@ -23,6 +23,11 @@ public class SecondActivity extends AppCompatActivity {
     TextView name,email;
     Button signOutBtn;
     FirebaseAuth mAuth;
+    Button guardian;
+    Button test;
+    Button aboutus;
+    Button emergency;
+    Button profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +38,26 @@ public class SecondActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         signOutBtn = findViewById(R.id.signout);
         mAuth = FirebaseAuth.getInstance();
+        guardian=findViewById(R.id.guardian);
+        guardian.setOnClickListener(view -> {
+            startActivity(new Intent(SecondActivity.this,Guardian.class));
+        });
+        test=findViewById(R.id.acctest);
+        test.setOnClickListener(view -> {
+            startActivity(new Intent(SecondActivity.this,DetectVibration.class));
+        });
+        aboutus=findViewById(R.id.aboutus);
+        aboutus.setOnClickListener(view -> {
+            startActivity(new Intent(SecondActivity.this,AboutUs.class));
+        });
+        emergency=findViewById(R.id.emergency);
+        emergency.setOnClickListener(view -> {
+            startActivity(new Intent(SecondActivity.this,sosActivity.class));
+        });
+        profile=findViewById(R.id.profile);
+        profile.setOnClickListener(view -> {
+            startActivity(new Intent(SecondActivity.this,Profile.class));
+        });
 
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();

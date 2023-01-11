@@ -16,6 +16,21 @@
         android:theme="@style/Theme.Safely"
         tools:targetApi="31">
         <activity
+            android:name=".Location"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".DetectVibration"
+            android:exported="false" />
+        <activity
+            android:name=".Guardian"
+            android:exported="false" />
+        <activity
             android:name=".sosActivity"
             android:exported="false" />
         <activity
