@@ -8,20 +8,15 @@
     tools:context=".SignUp">
 
     <TextView
-        android:id="@+id/signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
+        android:id="@+id/signup"
         android:text="Sign up"
         android:textColor="@color/white"
         android:textSize="35dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_margin="50dp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/usernameu"
