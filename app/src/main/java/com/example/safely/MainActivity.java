@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     EditText username;
     EditText passwordi;
 
-
     FirebaseAuth mAuth;
 
     @Override
