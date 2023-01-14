@@ -27,12 +27,9 @@
         android:id="@+id/emaill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="326dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="EMAIL" />
 
     <TextView
@@ -41,12 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/emaill"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
         android:background="#30ffffff"
         android:drawablePadding="20dp"
         android:padding="20dp"
@@ -58,12 +50,9 @@
         android:id="@+id/usrename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginBottom="263dp"
+        android:layout_below="@+id/emailbox"
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="USERNAME" />
 
     <TextView
@@ -71,12 +60,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="470dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/usrename"
+       android:layout_marginTop="10dp"
         android:background="#30ffffff"
         android:drawablePadding="20dp"
         android:inputType="textPassword"
@@ -88,9 +73,9 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/ttprofile"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="20dp"
         tools:srcCompat="@tools:sample/avatars" />
 
 
