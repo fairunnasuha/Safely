@@ -46,29 +46,6 @@
         android:textColorHint="@color/white" />
 
 
-    <TextView
-        android:id="@+id/usrename"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/emailbox"
-       android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="USERNAME" />
-
-    <TextView
-        android:id="@+id/cfpassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/usrename"
-       android:layout_marginTop="10dp"
-        android:background="#30ffffff"
-        android:drawablePadding="20dp"
-        android:inputType="textPassword"
-        android:padding="20dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
