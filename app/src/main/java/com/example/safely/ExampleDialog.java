@@ -10,20 +10,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class ExampleDialog extends AppCompatDialogFragment {
     private EditText editname;
     private EditText editphone;
     private ExampleDialogListener listener;
-    private FirebaseDatabase db = FirebaseDatabase.getInstance();
-    private DatabaseReference root = db.getReference();
+    FirebaseDatabase db;
+    FirebaseUser user;
+    private DatabaseReference reference ;
+
 
     @NonNull
     @Override
@@ -43,17 +52,52 @@ public class ExampleDialog extends AppCompatDialogFragment {
                 .setPositiveButton("Save", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
                         String name = editname.getText().toString();
-                        root.setValue(name);
+
                         String phone = editphone.getText().toString();
-                        root.setValue(phone);
+
+                        updateGuardian(name,phone);
+
                         listener.applyTexts(name,phone);
-                       
+
+
                     }
                 });
         editname =view.findViewById(R.id.editname);
         editphone = view.findViewById(R.id.editphone);
         return builder.create();
+    }
+
+    private void updateGuardian(String nameg,String phoneg) {
+
+        HashMap UserG = new HashMap();
+        UserG.put("guardianName",nameg);
+        UserG.put("guardianPhone",phoneg);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+        db = FirebaseDatabase.getInstance();
+        reference = db.getReference(uid);
+        reference.child("GuardianInfo").updateChildren(UserG).addOnCompleteListener(new OnCompleteListener() {
+            @Override
+            public void onComplete(@NonNull Task task) {
+
+                if (task.isSuccessful()){
+
+                    editname.setText("");
+                    editphone.setText("");
+//                    Toast.makeText(Guardian.this,"Successfully Updated",Toast.LENGTH_SHORT).show();
+
+                }else {
+
+//                    Toast.makeText(UpdateData.this,"Failed to Update",Toast.LENGTH_SHORT).show();
+
+                }
+
+            }
+        });
+
+
     }
 
     @Override
