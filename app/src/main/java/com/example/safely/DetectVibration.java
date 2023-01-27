@@ -2,6 +2,7 @@ package com.example.safely;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -41,8 +42,11 @@ public class DetectVibration extends AppCompatActivity {
                           //  z_accl > 2 ||
                           //  z_accl < -2) {
 
-                    if(floatSum > 14){
+                    if(floatSum > 14) {
+
                         textView.setText("Shaking");
+
+                        startActivity(new Intent(DetectVibration.this, CallorMessage.class));
                     }
                     else {
                         textView.setText("Not shaking");
