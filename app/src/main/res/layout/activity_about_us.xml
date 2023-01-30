@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5757"
+    android:background="@drawable/sf1"
     tools:context=".AboutUs">
 
     <TextView
@@ -19,7 +19,7 @@
         android:layout_marginBottom="50dp"
         android:gravity="center"
         android:text="About Us"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold" />
 
@@ -47,10 +47,10 @@
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
         android:drawablePadding="20dp"
-        android:text="NUR FITRAH BINTI BAHSRI"
         android:padding="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/white"/>
+        android:text="NUR FITRAH BINTI BAHSRI"
+        android:textColor="#716E77"
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/id1"
@@ -69,7 +69,7 @@
         android:text="2020489584"
         android:textSize="20dp"
         android:padding="20dp"
-        android:textColor="@color/white" />
+        android:textColor="#716E77" />
 
     <EditText
         android:id="@+id/role1"
@@ -88,7 +88,7 @@
         android:text="Backend developer"
         android:textSize="20dp"
         android:padding="20dp"
-        android:textColor="@color/white" />
+        android:textColor="#716E77" />
 
 
     <ImageView
@@ -117,7 +117,7 @@
         android:text="FAIRUN NASUHA BINTI MOHAMAD FAUDZI"
         android:padding="20dp"
         android:textSize="20dp"
-        android:textColor="@color/white"/>
+        android:textColor="#716E77"/>
 
     <TextView
         android:id="@+id/id2"
@@ -136,7 +136,7 @@
         android:text="2020"
         android:padding="20dp"
         android:textSize="20dp"
-        android:textColor="@color/white"/>
+        android:textColor="#716E77"/>
 
     <TextView
         android:id="@+id/role2"
@@ -183,7 +183,7 @@
         android:text="NAZHIF"
         android:padding="20dp"
         android:textSize="20dp"
-        android:textColor="@color/white"/>
+        android:textColor="#716E77"/>
 
     <TextView
         android:id="@+id/id3"
@@ -202,7 +202,7 @@
         android:text="2020"
         android:padding="20dp"
         android:textSize="20dp"
-        android:textColor="@color/white"/>
+        android:textColor="#716E77"/>
 
     <TextView
         android:id="@+id/role3"
@@ -221,6 +221,6 @@
         android:text="Frontend developer"
         android:padding="20dp"
         android:textSize="20dp"
-        android:textColor="@color/white"/>
+        android:textColor="#716E77"/>
 
 </RelativeLayout>

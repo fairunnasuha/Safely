@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5757"
+    android:background="@drawable/sf1"
     tools:context=".SecondActivity">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginTop="36dp"
         android:text="Safely"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35sp" />
 
     <GridLayout

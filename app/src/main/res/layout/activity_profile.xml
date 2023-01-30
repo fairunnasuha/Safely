@@ -4,57 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5757"
+    android:background="@drawable/sf1"
     tools:context=".Profile">
 
     <TextView
         android:id="@+id/ttprofile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="50dp"
         android:gravity="center"
         android:text="Profile"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/emaill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:textColor="@color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="EMAIL" />
-
-    <TextView
-        android:id="@+id/emailbox"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/emaill"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="#30ffffff"
-        android:drawablePadding="20dp"
-        android:padding="20dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:layout_margin="30dp"
+        app:cardCornerRadius="0dp"
+        android:layout_centerVertical="true"
+        app:cardElevation="20dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="24dp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ttprofile"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        tools:srcCompat="@tools:sample/avatars" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/emaill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="EMAIL" />
+
+            <TextView
+                android:id="@+id/emailbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#308F5E5E"
+                android:drawablePadding="20dp"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 
 
 </RelativeLayout>

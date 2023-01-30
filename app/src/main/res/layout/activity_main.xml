@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5757"
+    android:background="@drawable/sf1"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -67,7 +67,6 @@
                 android:id="@+id/loginbtn"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:textSize="18sp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="#DF243A"
                 android:text="LOGIN" />

@@ -44,9 +44,6 @@
             android:name=".CallorMessage"
             android:exported="false" />
         <activity
-            android:name=".Location"
-            android:exported="false" />
-        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity
