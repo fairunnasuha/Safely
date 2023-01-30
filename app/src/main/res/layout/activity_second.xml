@@ -43,22 +43,12 @@
                 android:id="@+id/guardian"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="0"
-                android:layout_below="@+id/name"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="center"
+                android:textColor="#E32DA1"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="50dp"
                 android:text="guardian" />
 
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -74,22 +64,15 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
                 <Button
                     android:id="@+id/profile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/emergency"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
                     android:text="profile" />
-            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -100,26 +83,27 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/emergency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/guardian"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:backgroundTint="@color/white"
                     android:text="emergency" />
-            </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -130,30 +114,26 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/profile"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
                     android:text="location" />
-            </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -168,22 +148,17 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/aboutus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/location"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
                     android:text="about us" />
-            </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -198,22 +173,17 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/acctest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/aboutus"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
                     android:text="test" />
-            </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -228,27 +198,21 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/signout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/acctest"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="50dp"
                     android:text="Sign out" />
-            </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
 
     </GridLayout>
-
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
@@ -259,7 +223,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="TextView" />
 
     <TextView
@@ -270,7 +234,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:text="TextView" />
