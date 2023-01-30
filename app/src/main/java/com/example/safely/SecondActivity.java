@@ -29,6 +29,7 @@ public class SecondActivity extends AppCompatActivity {
     Button aboutus;
     Button emergency;
     Button profile;
+    Button location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,10 @@ public class SecondActivity extends AppCompatActivity {
         profile=findViewById(R.id.profile);
         profile.setOnClickListener(view -> {
             startActivity(new Intent(SecondActivity.this,Profile.class));
+        });
+        location=findViewById(R.id.location);
+        location.setOnClickListener(view -> {
+            startActivity(new Intent(SecondActivity.this,MapsActivity.class));
         });
 
 

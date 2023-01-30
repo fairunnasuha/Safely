@@ -17,8 +17,7 @@
         android:text="Safely"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:textSize="35sp"
-        />
+        android:textSize="35sp" />
 
     <GridLayout
         android:layout_width="match_parent"
@@ -26,7 +25,7 @@
         android:layout_below="@+id/safely"
         android:layout_margin="20dp"
         android:columnCount="2"
-        android:rowCount="3">
+        android:rowCount="4">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
@@ -39,6 +38,18 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
+
+            <Button
+                android:id="@+id/guardian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_below="@+id/name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:text="guardian" />
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -235,16 +246,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <Button
-            android:id="@+id/guardian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_below="@+id/name"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="50dp"
-            android:text="guardian" />
 
     </GridLayout>
 
