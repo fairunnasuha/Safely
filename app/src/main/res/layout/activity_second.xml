@@ -49,10 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/email"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_margin="20dp"
         android:columnCount="2"
         android:rowCount="4">
 
@@ -72,11 +69,11 @@
                 android:id="@+id/guardian"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
                 android:backgroundTint="@color/white"
-                android:text="guardian"
-                android:textColor="#E32DA1" />
+                android:layout_gravity="center"
+                android:textColor="#E32DA1"
+                android:layout_centerHorizontal="true"
+                android:text="guardian" />
 
         </androidx.cardview.widget.CardView>
 
@@ -93,15 +90,15 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <Button
-                android:id="@+id/profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:text="profile"
-                android:textColor="#E32DA1" />
+                <Button
+                    android:id="@+id/profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="profile" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -122,16 +119,16 @@
             app:cardElevation="8dp">
 
 
-            <Button
-                android:id="@+id/emergency"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:gravity="center"
-                android:text="emergency"
-                android:textColor="#E32DA1" />
+                <Button
+                    android:id="@+id/emergency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:backgroundTint="@color/white"
+                    android:text="emergency" />
 
         </androidx.cardview.widget.CardView>
 
@@ -153,15 +150,15 @@
             app:cardElevation="8dp">
 
 
-            <Button
-                android:id="@+id/location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:text="location"
-                android:textColor="#E32DA1" />
+                <Button
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
+                    android:text="location" />
 
         </androidx.cardview.widget.CardView>
 
@@ -178,15 +175,15 @@
             app:cardElevation="8dp">
 
 
-            <Button
-                android:id="@+id/aboutus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:text="about us"
-                android:textColor="#E32DA1" />
+                <Button
+                    android:id="@+id/aboutus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="about us" />
 
         </androidx.cardview.widget.CardView>
 
@@ -203,15 +200,15 @@
             app:cardElevation="8dp">
 
 
-            <Button
-                android:id="@+id/acctest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:text="test"
-                android:textColor="#E32DA1" />
+                <Button
+                    android:id="@+id/acctest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="test" />
 
         </androidx.cardview.widget.CardView>
 
@@ -228,29 +225,20 @@
             app:cardElevation="8dp">
 
 
-            <Button
-                android:id="@+id/signout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:text="Sign out"
-                android:textColor="#E32DA1" />
+                <Button
+                    android:id="@+id/signout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#E32DA1"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="Sign out" />
 
         </androidx.cardview.widget.CardView>
 
 
     </GridLayout>
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:text="OFF"
-        android:textOff="OFF"
-        android:textOn="ON" />
 
 
 </RelativeLayout>

@@ -46,10 +46,9 @@ public class CallorMessage extends AppCompatActivity {
     Button close;
     private FirebaseUser fUser;
     static int PERMISSION_CODE = 100;
-    Button btnsendlc;
+    Button sendlc;
     private final static int SEND_SMS_PERMISSION_REQ = 1;
     private LocationRequest locationRequest;
-//    private String phoneno;
 
 
     @Override
@@ -58,19 +57,18 @@ public class CallorMessage extends AppCompatActivity {
         setContentView(R.layout.activity_callor_message);
 
         Button call;
-        call = findViewById(R.id.call);
-        btnsendlc = findViewById(R.id.sendlc);
-        btnsendlc.setEnabled(false);
 
-       /* if (ContextCompat.checkSelfPermission(CallorMessage.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+        call = findViewById(R.id.call);
+
+        if (ContextCompat.checkSelfPermission(CallorMessage.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
 
             ActivityCompat.requestPermissions(CallorMessage.this, new String[]{Manifest.permission.CALL_PHONE}, PERMISSION_CODE);
 
-            btnsendlc = findViewById(R.id.sendlc);
-            btnsendlc.setOnClickListener(view -> {
+            sendlc = findViewById(R.id.sendlc);
+            sendlc.setOnClickListener(view -> {
                 startActivity(new Intent(CallorMessage.this, MapsActivity.class));
             });
-        }*/
+        }
 
         call.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,13 +112,13 @@ public class CallorMessage extends AppCompatActivity {
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         locationRequest.setInterval(5000);
         locationRequest.setFastestInterval(2000);
-       // sendlc = findViewById(R.id.sendlc);
+        sendlc = findViewById(R.id.sendlc);
         if (checkPermission(android.Manifest.permission.SEND_SMS)) {
-            btnsendlc.setEnabled(true);
+            sendlc.setEnabled(true);
         } else {
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.SEND_SMS}, SEND_SMS_PERMISSION_REQ);
         }
-        btnsendlc.setOnClickListener(new View.OnClickListener() {
+        sendlc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -173,38 +171,22 @@ public class CallorMessage extends AppCompatActivity {
                                         //new latlngConst(latitude,longitude);
                                         //x.latlngTest(latitude,longitude);
 //                                        AddressText.setText("Latitude: "+ latitude + "\n" + "Longitude: "+ longitude);
-                                        fUser = FirebaseAuth.getInstance().getCurrentUser();
 
-                                        FirebaseDatabase.getInstance().getReference().child(fUser.getUid()).child("GuardianInfo").addValueEventListener(new ValueEventListener() {
-                                            @Override
-                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                GuardianConstructor Guser = snapshot.getValue(GuardianConstructor.class);
-                                                if (Guser != null) {
-                                                    String phoneno = Guser.getGuardianPhone();
-                                                    String s1 = phoneno;
-                                                    String s3 = "Hey I am in DANGER!! HELP ME!! \nMy Location : \n";
-                                                    String s2 = s3 + "https://www.google.com/maps/search/?api=1&query=" + latitude + "," + longitude;
+                                        String s1 = "01114127143";
+                                        String s3 = "Hey I am in DANGER!! HELP ME!! \nMy Location : \n";
+                                        String s2 = s3 + "https://www.google.com/maps/search/?api=1&query=" + latitude + "," + longitude;
 
-                                                    if (!TextUtils.isEmpty(s1) && !TextUtils.isEmpty(s2)) {
+                                        if (!TextUtils.isEmpty(s1) && !TextUtils.isEmpty(s2)) {
 
-                                                        if (checkPermission(Manifest.permission.SEND_SMS)) {
-                                                            SmsManager smsManager = SmsManager.getDefault();
-                                                            smsManager.sendTextMessage(s1, null, s2, null, null);
-                                                            Toast.makeText(CallorMessage.this,"Your Location sent",Toast.LENGTH_SHORT).show();
-                                                        } else {
-                                                            Toast.makeText(CallorMessage.this, "Permission Denied", Toast.LENGTH_SHORT).show();
-                                                        }
-                                                    } else {
-                                                        Toast.makeText(CallorMessage.this, "Permission denied", Toast.LENGTH_SHORT).show();
-                                                    }
-                                                }
+                                            if (checkPermission(android.Manifest.permission.SEND_SMS)) {
+                                                SmsManager smsManager = SmsManager.getDefault();
+                                                smsManager.sendTextMessage(s1, null, s2, null, null);
+                                            } else {
+                                                Toast.makeText(CallorMessage.this, "Permission Denied", Toast.LENGTH_SHORT).show();
                                             }
-                                            @Override
-                                            public void onCancelled(@NonNull DatabaseError error) {
-                                            }
-                                        });
-
-
+                                        } else {
+                                            Toast.makeText(CallorMessage.this, "Permission denied", Toast.LENGTH_SHORT).show();
+                                        }
                                     }
                                 }
                             }, Looper.getMainLooper());
@@ -287,7 +269,7 @@ public class CallorMessage extends AppCompatActivity {
         switch (requestCode) {
             case SEND_SMS_PERMISSION_REQ:
                 if (grantResults.length > 0 && (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                    btnsendlc.setEnabled(true);
+                    sendlc.setEnabled(true);
                 }
                 break;
         }

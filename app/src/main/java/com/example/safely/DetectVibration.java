@@ -35,7 +35,7 @@ public class DetectVibration extends AppCompatActivity {
 
                     float floatSum = Math.abs(x_accl) + Math.abs(y_accl) + Math.abs(z_accl);
 
-                            //if (x_accl > 2 ||
+                    //if (x_accl > 2 ||
                           //  x_accl < -2 ||
                           //  y_accl > 12 ||
                           //  y_accl < -12 ||
