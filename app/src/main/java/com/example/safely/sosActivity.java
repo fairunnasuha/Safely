@@ -43,10 +43,10 @@ public class sosActivity extends AppCompatActivity {
         sosbtn = findViewById(R.id.sosbtn);
         sosbtn.setOnTouchListener(new View.OnTouchListener() {
             @SuppressLint("ClickableViewAccessibility")
-            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener(){
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
                 @Override
                 public void onLongPress(MotionEvent e) {
-                    Toast.makeText(getApplicationContext(),"Long press",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Long press", Toast.LENGTH_SHORT).show();
                     super.onLongPress(e);
                     //Get current user
                     fUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -76,10 +76,13 @@ public class sosActivity extends AppCompatActivity {
 
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Toast.makeText(getApplicationContext(),"Double Tap press",Toast.LENGTH_SHORT).show();
-                    return super.onDoubleTap(e);
+                    Toast.makeText(getApplicationContext(), "Double Tap press", Toast.LENGTH_SHORT).show();
+                    super.onDoubleTap(e);
+                    startActivity(new Intent(sosActivity.this, MapsActivity.class));
+                    return false;
                 }
             });
+
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                gestureDetector.onTouchEvent(motionEvent);
