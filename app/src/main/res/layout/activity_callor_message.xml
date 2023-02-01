@@ -48,18 +48,7 @@
         android:backgroundTint="@color/design_default_color_error"
         android:text="send location" />
 
-    <Button
-        android:id="@+id/close"
-        android:layout_width="46dp"
-        android:layout_height="34dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
-        android:background="@drawable/ic_baseline_close_24"
-        app:backgroundTint="#F1EEEE" />
+
 
 
 </RelativeLayout>
